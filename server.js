@@ -59,16 +59,16 @@ app.delete("/tarefas/:id", (req, res) => {
   res.json({ mensagem: "Tarefa deletada" });
 });
 
-// Alteração para v1.0.2
+// Alteração para v1.0.3
 app.get("/", (req, res) => {
   res.json({
-    status: "🚀 API de Tarefas ONLINE (Render)",
-    versao: "1.0.2",
-    autor: "Gustavo Silva", // Adicionando seu nome
+    status: "✅ API de Tarefas em Produção",
+    versao: "1.0.3",
+    environment: process.env.NODE_ENV || "production",
+    uptime: process.uptime().toFixed(2) + "s", 
     timestamp: new Date().toISOString()
   });
 });
-
 // Iniciar servidor
 app.listen(PORT, () => {
   console.log(`Servidor rodando na porta ${PORT}`);
