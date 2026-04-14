@@ -59,13 +59,14 @@ app.delete("/tarefas/:id", (req, res) => {
   res.json({ mensagem: "Tarefa deletada" });
 });
 
-// Health check
+// Alteração para v1.0.2
 app.get("/", (req, res) => {
   res.json({
-  status: "API de Tarefas rodando com CI/CD no Render",
-  versao: "1.0.1",
-  timestamp: new Date().toISOString()
-});
+    status: "🚀 API de Tarefas ONLINE (Render)",
+    versao: "1.0.2",
+    autor: "Gustavo Silva", // Adicionando seu nome
+    timestamp: new Date().toISOString()
+  });
 });
 
 // Iniciar servidor
